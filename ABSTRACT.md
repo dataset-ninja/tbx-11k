@@ -7,7 +7,6 @@ This dataset contains 11200(11700) X-ray images with corresponding bounding box 
 ***active_tb&latent_tb*** refers to X-rays that contain active and latent TB simultaneously. ***active_tb*** and ***latent_tb*** refers to X-rays that only contain active TB or latent TB, respectively.
 Labels for ***active_tb***:
 - *ActiveTuberculosis*
-- *PulmonaryTuberculosis*
 ***latent_tb***:
 - *ObsoletePulmonaryTuberculosis*
  ***uncertain_tb*** refers to TB X-rays whose TB types cannot be recognized under today’s medical conditions. Uncertain TB X-rays are all put into the test set. 

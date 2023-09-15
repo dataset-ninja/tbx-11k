@@ -106,9 +106,6 @@ def convert_and_upload_supervisely_project(
     no data for test. Check README of orginal dataset.
     """
 
-    instance_coco = COCO(inst_train)
-    categories = instance_coco.cats
-
     def create_ann(image_path, img_dict):
         image_id = img_dict[image_path]
         labels = []
@@ -153,7 +150,8 @@ def convert_and_upload_supervisely_project(
         tags = [sly.Tag(tag_meta) for tag_meta in tag_metas if tag_meta.name == tag_value]
         return sly.Annotation(img_size=(img_height, img_wight), labels=labels, img_tags=tags)
 
-    obj_classes = [sly.ObjClass(categories[cat]["name"], sly.Rectangle) for cat in categories]
+    obj_names = ["ActiveTuberculosis", "ObsoletePulmonaryTuberculosis"]
+    obj_classes = [sly.ObjClass(name, sly.Rectangle) for name in obj_names]
 
     tag_metas = [sly.TagMeta(name, sly.TagValueType.NONE) for name in tag_names]
 
