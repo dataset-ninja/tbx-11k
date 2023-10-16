@@ -1,6 +1,6 @@
 Dataset **TBX11K** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](Set 'HIDE_DATASET=False' to generate download link)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/G/r/V0/hM2NS3XrP3qUr0sf1qztduBwHUNf7kumN4T1Tb2TIFn9929hyUyEAvLW7GJK2ZsTMnh2vmyRw5Gx986HnUYu7MUGXi43MQX8zPCa4IVHQFNVo5wTzQd5zxsUdbwH.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
