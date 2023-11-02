@@ -2,7 +2,65 @@
 
 As a serious infectious disease, tuberculosis is one of the major threats to human health worldwide, leading to millions of deaths every year. Although early diagnosis and treatment can greatly improve the chances of survival, it remains a major challenge, especially in developing countries. Computer-aided tuberculosis diagnosis is a promising choice for TB diagnosis due to the great success of deep learning. 
 
-![Dataset categories](https://i.ibb.co/m4tKLQR/Screenshot-from-2020-08-03-22-31-41.webp)
+<table border="1">
+  <tr>
+    <th>Class</th>
+    <th>Train</th>
+    <th>Val</th>
+    <th>Test</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Non-TB Healthy</td>
+    <td>3000</td>
+    <td>800</td>
+    <td>1200</td>
+    <td>5000</td>
+  </tr>
+  <tr>
+    <td>Sick & Non-TB</td>
+    <td>3000</td>
+    <td>800</td>
+    <td>1200</td>
+    <td>5000</td>
+  </tr>
+  <tr>
+    <td rowspan="3">TB</td>
+    <td>Active TB</td>
+    <td>473</td>
+    <td>157</td>
+    <td>294</td>
+    <td>924</td>
+  </tr>
+  <tr>
+    <td>Latent TB</td>
+    <td>104</td>
+    <td>36</td>
+    <td>72</td>
+    <td>212</td>
+  </tr>
+  <tr>
+    <td>Active & Latent TB</td>
+    <td>23</td>
+    <td>7</td>
+    <td>24</td>
+    <td>54</td>
+  </tr>
+  <tr>
+    <td>Uncertain TB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>10</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td><strong>Total</strong></td>
+    <td><strong>6600</strong></td>
+    <td><strong>1800</strong></td>
+    <td><strong>2800</strong></td>
+    <td><strong>11200</strong></td>
+  </tr>
+</table>
 
 <i>active_tb&latent_tb</i> refers to X-rays that contain active and latent TB simultaneously. <i>active_tb</i> and <i>latent_tb</i> refer to X-rays that only contain active TB or latent TB, respectively.
 
@@ -65,8 +123,51 @@ dataset, each TB box only has one label of being active or latent, but a
 TB X-ray would have both active TB and latent TB labels.
 ``` 
 
-![Comparison with Other TB Datasets](https://i.ibb.co/dBXbCRW/Screenshot-from-2020-08-03-22-28-18.webp)
+<table border="1">
+  <tr>
+    <th>Datasets</th>
+    <th>Year</th>
+    <th>Class</th>
+    <th>Label</th>
+    <th>Sample</th>
+  </tr>
+  <tr>
+    <td>MC</td>
+    <td>2014</td>
+    <td>2</td>
+    <td>Image-level</td>
+    <td>138</td>
+  </tr>
+  <tr>
+    <td>Shenzhen</td>
+    <td>2014</td>
+    <td>2</td>
+    <td>Image-level</td>
+    <td>662</td>
+  </tr>
+  <tr>
+    <td>DA</td>
+    <td>2014</td>
+    <td>2</td>
+    <td>Image-level</td>
+    <td>156</td>
+  </tr>
+  <tr>
+    <td>DB</td>
+    <td>2014</td>
+    <td>2</td>
+    <td>Image-level</td>
+    <td>150</td>
+  </tr>
+  <tr>
+    <td>TBX11K</td>
+    <td>2020</td>
+    <td>4</td>
+    <td>Bounding box</td>
+    <td>11200</td>
+  </tr>
+</table>
 
-The proposed TBX11K dataset is much larger, better annotated, and more realistic than existing TB datasets, enabling the training of deep CNNs. First, unlike previous ([Schenzen dataset](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/) and [CXR digital image datasets](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0112980)] that only contain several tens/hundreds of X-ray images, TBX11K has 11,200 images that are about 17× larger than the existing largest dataset, i.e., [Shenzhen dataset](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/ "Two public chest X-ray datasets for computer-aided screening of pulmonary diseases"), so that TBX11K makes it possible to train very deep CNNs. Second, instead of only having image-level annotations as in previous datasets, TBX11K annotates TB areas using bounding boxes, so that future CTD methods can not only recognize the manifestations of TB but also detect the TB areas to help radiologists for the definitive diagnosis. Third, TBX11K includes four categories of <i>healthy</i>, <i>active_tb</i>, <i>latent_tb</i>, and <i>sick_but_non-tb</i>, rather than the binary classification for TB or not in previous datasets, so that future CTD systems can adapt to more complex real-world scenarios and provide people with more detailed disease analyses.
+The proposed TBX11K dataset is much larger, better annotated, and more realistic than existing TB datasets, enabling the training of deep CNNs. First, unlike previous ([Schenzen dataset](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/) and [CXR digital image datasets](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0112980)) that only contain several tens/hundreds of X-ray images, TBX11K has 11,200 images that are about 17× larger than the existing largest dataset, i.e., [Shenzhen dataset](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4256233/ "Two public chest X-ray datasets for computer-aided screening of pulmonary diseases"), so that TBX11K makes it possible to train very deep CNNs. Second, instead of only having image-level annotations as in previous datasets, TBX11K annotates TB areas using bounding boxes, so that future CTD methods can not only recognize the manifestations of TB but also detect the TB areas to help radiologists for the definitive diagnosis. Third, TBX11K includes four categories of <i>healthy</i>, <i>active_tb</i>, <i>latent_tb</i>, and <i>sick_but_non-tb</i>, rather than the binary classification for TB or not in previous datasets, so that future CTD systems can adapt to more complex real-world scenarios and provide people with more detailed disease analyses.
 
 The ground truth of the test set will not be released, because it is an online competition for computer-aided tuberculosis diagnosis. To promote the development of this field, the authors suggest you use the train set for training and the val set for validation when tuning your model. When you submit your results of the testing set to the authors' server, they suggest you train your model on the <i>train+val</i> set and test on the <i>test</i> set.
