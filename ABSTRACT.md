@@ -73,7 +73,7 @@ Labels for <i>active_tb</i>:
 - *ObsoletePulmonaryTuberculosis*
  <i>uncertain_tb</i> refers to TB X-rays whose TB types cannot be recognized under today’s medical conditions. Uncertain TB X-rays are all put into the test set. 
 
-![Distribution of the areas](https://i.ibb.co/JCFCK77/Screenshot-from-2020-08-04-09-57-05.webp)
+<img width="706" alt="tbx11k_preview_1" src="https://github.com/dataset-ninja/tbx-11k/assets/123257559/d0863cda-9226-44a8-b80e-fdfa71fc04ac">
 
 This is the distribution of the areas of TB bounding boxes. The left and right values of each bin define its corresponding area range, and the height of each bin denotes the number of TB bounding boxes with an area within this range. Note that X-rays are in the resolution of about 3000×3000. However, the original 3000×3000 images will lead to a storage size of over 100GB, which is too large to deliver. On the other hand, the authors found that the resolution of 512 × 512 is enough to train deep models for TB detection and classification. In addition, it is almost impossible to directly use the 3000 × 3000 X-ray images for TB detection due to the limited receptive fields of the existing CNNs. Therefore, the authors decided to only release the X-rays with a resolution of 512×512. For a fair comparison, they recommend all researchers use this resolution for their experiments.
 
