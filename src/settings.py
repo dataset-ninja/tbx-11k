@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "TBX11K"
-PROJECT_NAME_FULL: str = "Tuberculosis X-ray"
+PROJECT_NAME_FULL: str = "TBX11K: Tuberculosis X-ray"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
