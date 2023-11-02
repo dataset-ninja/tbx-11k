@@ -1,4 +1,4 @@
-**Tuberculosis X-ray** is a dataset for an object detection task. It is used in the medical research, and in the medical industry. 
+**TBX11K: Tuberculosis X-ray** is a dataset for an object detection task. It is used in the medical research, and in the medical industry. 
 
 The dataset consists of 11702 images with 1211 labeled objects belonging to 2 different classes including *ActiveTuberculosis* and *ObsoletePulmonaryTuberculosis*.
 
