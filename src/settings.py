@@ -70,6 +70,7 @@ AUTHORS: Optional[List[str]] = [
     "Huifang Wang",
     "Ming-Ming Cheng",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["http://mmcheng.net/tb/"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
     "Nankai University",
@@ -138,6 +139,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
