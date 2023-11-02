@@ -4,6 +4,7 @@ As a serious infectious disease, tuberculosis is one of the major threats to hum
 
 <table border="1">
   <tr>
+    <th></th>
     <th>Class</th>
     <th>Train</th>
     <th>Val</th>
@@ -11,6 +12,7 @@ As a serious infectious disease, tuberculosis is one of the major threats to hum
     <th>Total</th>
   </tr>
   <tr>
+    <td rowspan="2">Non-TB</td>
     <td>Non-TB Healthy</td>
     <td>3000</td>
     <td>800</td>
@@ -25,7 +27,7 @@ As a serious infectious disease, tuberculosis is one of the major threats to hum
     <td>5000</td>
   </tr>
   <tr>
-    <td rowspan="3">TB</td>
+    <td rowspan="4">TB</td>
     <td>Active TB</td>
     <td>473</td>
     <td>157</td>
@@ -54,7 +56,8 @@ As a serious infectious disease, tuberculosis is one of the major threats to hum
     <td>10</td>
   </tr>
   <tr>
-    <td><strong>Total</strong></td>
+    <td rowspan="7">Total</td>
+    <td><strong></strong></td>
     <td><strong>6600</strong></td>
     <td><strong>1800</strong></td>
     <td><strong>2800</strong></td>
